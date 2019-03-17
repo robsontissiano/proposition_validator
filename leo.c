@@ -70,14 +70,14 @@ void testaProposicao(char *proposicao){
     //printf("********************\n\n");
 
 
-    anterior = proposicao[0];
-
     if (proposicao[0] != "\0"){
+      //anterior = proposicao[0];
+
       if(opcoes[j] == proposicao[0]){
         //printf("ok 3 \n");
         counter = counter + 1;
         //printf("ok 4 \n");
-        //printf("Proposicao Valida! \n\n");
+        //printf("Proposicao %c Valida! \n\n", proposicao[0]);
         //return;
         //return anterior;
       }
