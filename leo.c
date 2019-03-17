@@ -37,11 +37,13 @@ void testaProposicao(char *proposicao){
   for(int j=0;j<tamanhoOpcoes;j++){
 
 
-    printf("Proposicao %c \n", proposicao);
+    printf("********************\n\n");
+    printf("Proposicao %c \n", proposicao[0]);
     printf("Opcao %c \n", opcoes[j]);
+    printf("********************\n\n");
 
 
-    if(opcoes[j] == proposicao){
+    if(opcoes[j] == proposicao[0]){
     // if(!strcmp(opcoes[j], proposicao)){
       printf("Proposicao Valida! \n\n");
       return;
@@ -49,7 +51,7 @@ void testaProposicao(char *proposicao){
     else {
       printf("Proposicao Invalida! \n\n");
     }
-    printf("[%d]: \n", j);
+    // printf("[%d]: \n", j);
   //  return
   }
 }
@@ -59,7 +61,7 @@ char lerProposicao(){
   printf("Insira a proposição para validar: \n");
   scanf("%s", &proposicao);
   // gets(proposicao);
-  printf("Proposicao: %s \n", proposicao);
+  printf("Proposicao: %c \n", proposicao[0]);
   testaProposicao(proposicao);
 }
 
@@ -79,15 +81,12 @@ void main () {
     }
     else if(resposta == 'S' || resposta == 's') {
       mostraProposicoes();
-      printf("Limpando o console em 5 segundos... \n");
-      sleep(5);
-      system("clear");
     }
     else if (resposta == 'N' || resposta == 'n') {
       lerProposicao();
-      printf("Limpando o console em 5 segundos... \n");
-      sleep(5);
-      system("clear");
     }
+    printf("Limpando o console em 5 segundos... \n");
+    sleep(5);
+    system("clear");
   } while (resposta != 'x');
 }
